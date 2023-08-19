@@ -10,6 +10,8 @@ function App() {
   // getContractNFTs("0x745b8158a7e95aaad14e1a58dea21b9f808c93a9");
 
   const [searchText, setSearchText] = useState("");
+  const [loading, setLoading] = useState("");
+  const [nfts, setNfts] = useState("");
 
   return (
     <Layout Style={{ height: "100vh" }}>
