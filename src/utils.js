@@ -9,4 +9,12 @@ export const searchNFTs = async (searchText) => {
   url.searchParams.append("q", searchText);
   url.searchParams.append("filter", "name");
   url.searchParams.append("limit", "12");
+
+  const response = await fetch(url, {
+    headers: {
+      accept: "application/json",
+      "X-API-KEY": apiKey,
+    },
+  });
+  return response.json();
 };
