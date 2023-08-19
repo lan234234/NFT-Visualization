@@ -47,7 +47,9 @@ function App() {
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Button type="primary">Search</Button>
+          <Button type="primary" onClick={handleSearch}>
+            Search
+          </Button>
         </Input.Group>
         <List
           style={{
