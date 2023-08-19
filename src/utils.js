@@ -33,3 +33,18 @@ export const getNFTTrades = async (tokenAddress) => {
   });
   return response.json();
 };
+
+export const getContractNFTs = async (tokenAddress) => {
+  const url = new URL(`${origin}/api/v2/nft/${tokenAddress}`);
+  url.searchParams.append("chain", "eth");
+  url.searchParams.append("format", "decimal");
+  url.searchParams.append("limit", "20");
+
+  const response = await fetch(url, {
+    headers: {
+      accept: "application/json",
+      "X-API-KEY": apiKey,
+    },
+  });
+  return response.json();
+};
