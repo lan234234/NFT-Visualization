@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { Button, Layout, Input, List, Card } from "antd";
+import { Button, Layout, Input, List, Card, message } from "antd";
+import { getContractNFTs } from "./utils";
 
 const { Header, Content } = Layout;
 
@@ -12,6 +13,22 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState("");
   const [nfts, setNfts] = useState("");
+
+  const handleSearch = async () => {
+    if (searchText === "") {
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const data = await getContractNFTs(searchText);
+      setNfts(data.result);
+    } catch (error) {
+      message.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Layout Style={{ height: "100vh" }}>
