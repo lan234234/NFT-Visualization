@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Button, Layout, Input } from "antd";
+import { Button, Layout, Input, List, Card } from "antd";
 
 const { Header, Content } = Layout;
 
@@ -21,7 +21,7 @@ function App() {
       <Content
         style={{ height: "calc(100% - 64px", padding: 20, overflowY: "auto" }}
       >
-        <Input.Group compact>
+        <Input.Group>
           <Input
             style={{ width: 500 }}
             placeholder="Enter a NFT contract address to search"
@@ -30,6 +30,28 @@ function App() {
           />
           <Button type="primary">Search</Button>
         </Input.Group>
+        <List
+          style={{
+            marginTop: 20,
+            height: "calc(100% - 52px)",
+            overflow: "auto",
+          }}
+          grid={{
+            gutter: 16,
+            xs: 1,
+            sm: 3,
+            md: 3,
+            lg: 3,
+            xl: 4,
+            xxl: 4,
+          }}
+          dataSource={[1, 2, 3]}
+          renderItem={(nft) => (
+            <List.Item key={nft}>
+              <Card title={nft} />
+            </List.Item>
+          )}
+        />
       </Content>
     </Layout>
   );
