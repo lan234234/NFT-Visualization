@@ -14,7 +14,9 @@ function App() {
           NFT Browser
         </div>
       </Header>
-      <Content></Content>
+      <Content
+        style={{ height: "calc(100% - 64px", padding: 20, overflowY: "auto" }}
+      ></Content>
     </Layout>
   );
 }
