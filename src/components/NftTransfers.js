@@ -1,4 +1,4 @@
-import { Tooltip } from "antd";
+import { Button, Table, Tooltip } from "antd";
 
 const ModalContent = () => {
   return <Table columns={[]} dataSource={[]} pagination={{ pageSize: 5 }} />;
