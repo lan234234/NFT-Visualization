@@ -1,8 +1,23 @@
 import { Button, Table, Tooltip, Modal } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { InfoCircleOutlined } from "@ant-design/icons";
+import { getNFTTransfers } from "../utils";
 
-const ModalContent = () => {
+const ModalContent = ({ nft }) => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const { token_address, token_id } = nft;
+
+  useEffect(() => {
+    getNFTTransfers(token_address, token_id)
+      .then((resp) => {
+        setData(resp.result);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return <Table columns={[]} dataSource={[]} pagination={{ pageSize: 5 }} />;
 };
 
