@@ -1,7 +1,33 @@
-import { Button, Table, Tooltip, Modal } from "antd";
+import { Button, Table, Tooltip, Modal, Skeleton } from "antd";
 import { useEffect, useState } from "react";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import { getNFTTransfers } from "../utils";
+
+const columns = [
+  {
+    title: "Transfer DateTime",
+    dataIndex: "block_timestamp",
+    key: "block_timestamp",
+    render: (value) => {
+      return new Date(value).toLocaleString();
+    },
+  },
+  {
+    title: "Amount",
+    dataIndex: "amount",
+    key: "amount",
+  },
+  {
+    title: "From Address",
+    dataIndex: "from_address",
+    key: "from_address",
+  },
+  {
+    title: "To Address",
+    dataIndex: "to_address",
+    key: "to_address",
+  },
+];
 
 const ModalContent = ({ nft }) => {
   const [loading, setLoading] = useState(true);
@@ -18,8 +44,12 @@ const ModalContent = ({ nft }) => {
       });
   }, []);
 
+  if (loading) {
+    return <Skeleton active />;
+  }
+
   return (
-    <Table columns={[]} dataSource={[data]} pagination={{ pageSize: 5 }} />
+    <Table columns={columns} dataSource={data} pagination={{ pageSize: 5 }} />
   );
 };
 
@@ -28,7 +58,7 @@ const NftTransfers = ({ nft }) => {
 
   return (
     <>
-      <Tooltip title="Transder(s) on this NFT">
+      <Tooltip title="Transfer(s) on this NFT">
         <Button
           style={{ border: "none" }}
           size="large"
