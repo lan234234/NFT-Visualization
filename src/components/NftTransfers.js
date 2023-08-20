@@ -1,11 +1,13 @@
 import { Button, Table, Tooltip, Modal } from "antd";
+import { useState } from "react";
+import { InfoCircleOutlined } from "@ant-design/icons";
 
 const ModalContent = () => {
   return <Table columns={[]} dataSource={[]} pagination={{ pageSize: 5 }} />;
 };
 
 const NftTransfers = ({ nft }) => {
-  constant[(modalOpen, setModalOpen)] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
