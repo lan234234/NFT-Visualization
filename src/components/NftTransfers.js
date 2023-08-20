@@ -18,7 +18,9 @@ const ModalContent = ({ nft }) => {
       });
   }, []);
 
-  return <Table columns={[]} dataSource={[]} pagination={{ pageSize: 5 }} />;
+  return (
+    <Table columns={[]} dataSource={[data]} pagination={{ pageSize: 5 }} />
+  );
 };
 
 const NftTransfers = ({ nft }) => {
