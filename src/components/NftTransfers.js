@@ -1,4 +1,4 @@
-import { Button, Table, Tooltip } from "antd";
+import { Button, Table, Tooltip, Modal } from "antd";
 
 const ModalContent = () => {
   return <Table columns={[]} dataSource={[]} pagination={{ pageSize: 5 }} />;
@@ -18,6 +18,16 @@ const NftTransfers = ({ nft }) => {
           onClick={() => setModalOpen(true)}
         />
       </Tooltip>
+      <Modal
+        width={1000}
+        title="Transfer(s) List"
+        destroyOnClose
+        open={modalOpen}
+        footer={null}
+        onCancel={() => setModalOpen(false)}
+      >
+        <ModalContent nft={nft} />
+      </Modal>
     </>
   );
 };
