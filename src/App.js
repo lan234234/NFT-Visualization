@@ -3,17 +3,14 @@ import "./App.css";
 import { Button, Layout, Input, List, Card, message } from "antd";
 import { getContractNFTs } from "./utils";
 import NftCard from "./components/NftCard";
+import ContractTrades from "./components/ContractTrades";
 
 const { Header, Content } = Layout;
 
 function App() {
-  // searchNFTs("car");
-  // getNFTTrades("0x745b8158a7e95aaad14e1a58dea21b9f808c93a9");
-  // getContractNFTs("0x745b8158a7e95aaad14e1a58dea21b9f808c93a9");
-
   const [searchText, setSearchText] = useState("");
-  const [loading, setLoading] = useState("");
-  const [nfts, setNfts] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [nfts, setNfts] = useState([]);
 
   const handleSearch = async () => {
     if (searchText === "") {
@@ -21,6 +18,7 @@ function App() {
     }
 
     setLoading(true);
+
     try {
       const data = await getContractNFTs(searchText);
       setNfts(data.result);
@@ -32,16 +30,16 @@ function App() {
   };
 
   return (
-    <Layout Style={{ height: "100vh" }}>
+    <Layout style={{ height: "100vh" }}>
       <Header>
         <div style={{ fontSize: 16, fontWeight: 600, color: "white" }}>
           NFT Browser
         </div>
       </Header>
       <Content
-        style={{ height: "calc(100% - 64px", padding: 20, overflowY: "auto" }}
+        style={{ height: "calc(100% - 64px)", padding: 20, overflowY: "auto" }}
       >
-        <Input.Group>
+        <Input.Group compact>
           <Input
             style={{ width: 500 }}
             placeholder="Enter a NFT contract address to search"
@@ -51,6 +49,7 @@ function App() {
           <Button type="primary" onClick={handleSearch}>
             Search
           </Button>
+          <ContractTrades tokenAddress={searchText} />
         </Input.Group>
         <List
           style={{
