@@ -73,7 +73,9 @@ const ContractTrades = ({ tokenAddress }) => {
         open={modalOpen}
         footer={null}
         onCancel={() => setModalOpen(false)}
-      ></Modal>
+      >
+        <ModalContent tokenAddress={tokenAddress} />
+      </Modal>
     </>
   );
 };
