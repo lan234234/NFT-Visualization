@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# NFTInsight
+## _A NFT browser................._
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visit us at: [NFTInsight](https://nftinsight.dpqaiurhwhtug.amplifyapp.com)
 
-## Available Scripts
+## Features
+- **Authentication:** Secure user profiles with registration, login, and logout functionalities.
+- **Upload Hotel:** Hosts can upload new hotel listings complete with images and descriptions.
+- **Manage Hotel:** Hosts can view their listed hotels and delete any existing entries.
+- **Search Hotel:** Guests can search for available hotels with constraints on dates, location, and number of guests.
+- **Manage Reservation:** Guests can view their reservation history and manage (add or delete) reservations.
 
-In the project directory, you can run:
+## Demo
+Explore screenshots from HomelyHarbor showcasing each of our core features:
 
-### `npm start`
+### Authentication
+#### Register and Login with Different Role
+![Authentication Process](.github/images/1_login.png)
+#### Logout
+![Authentication Process](.github/images/1_logout.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Upload Hotel
+![Upload Hotel](.github/images/4_uploadStay.png)
+*Interface for hosts to upload new hotels with details and pictures.*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Manage Hotel
+#### View and Delete Hosting Hotels
+![Manage Hotel](.github/images/5_viewStay_3.png)
 
-### `npm test`
+![Manage Hotel](.github/images/5_viewStay.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### View Hotel Reservations
+![View Hotel Reservation](.github/images/5_viewStayReservation.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Search Hotel
+![Search Hotel](.github/images/2_searchStay.png)
+*Interface for clients to search for available hotels.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Search Results
+![Search Result](.github/images/2_searchResult.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### View Details
+![Stay Info](.github/images/2_searchResult_2.png)
 
-### `npm run eject`
+![Stay Info](.github/images/2_searchResult_1.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Manage Reservation
+#### Reserve Hotel
+![Reserve Hotel](.github/images/3_reserveStay.png)
+#### View and Delete Reserved Hotel
+![Manage Reservation](.github/images/3_manageReservation.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+- **HTML, CSS, JavaScript:** Core technologies for building and styling web frontends, providing structure, design, and interactivity.
+- **React:** Popular JavaScript library for building fast, dynamic, and component-based user interfaces.
+- **Node.js:** JavaScript runtime environment for developing scalable and high-performance network applications.
+- **Ant Design:** Comprehensive design framework for creating beautiful and responsive UI components.
+- **ReChart:** 
+- **AWS Amplify:** Managed static hosting and full-stack deployment service for web applications, offering scalability, custom domains.
+- **
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT License
