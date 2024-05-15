@@ -1,68 +1,47 @@
 # NFTInsight
-## _A NFT browser................._
+## _A NFT Value Visualizer_
 
-Visit us at: [NFTInsight](https://nftinsight.dpqaiurhwhtug.amplifyapp.com)
+NFTInsight is a streamlined dashboard designed for the search, viewing, and analysis of NFT assets. It leverages advanced web technologies to provide an intuitive and efficient user experience for exploring NFT data.
 
-## Features
-- **Authentication:** Secure user profiles with registration, login, and logout functionalities.
-- **Upload Hotel:** Hosts can upload new hotel listings complete with images and descriptions.
-- **Manage Hotel:** Hosts can view their listed hotels and delete any existing entries.
-- **Search Hotel:** Guests can search for available hotels with constraints on dates, location, and number of guests.
-- **Manage Reservation:** Guests can view their reservation history and manage (add or delete) reservations.
+### Visit Us
+For more information and to see NFTInsight in action, visit our website at: [NFTInsight](https://nftinsight.dpqaiurhwhtug.amplifyapp.com)
 
-## Demo
-Explore screenshots from HomelyHarbor showcasing each of our core features:
+### Features
+- **Streamlined Dashboard**: Created using HTML/CSS and JavaScript, our dashboard offers a seamless interface for interacting with NFT assets.
+- **Ant Design UI**: Utilized the Ant Design UI Component Library to enhance client-side development efficiency and deliver a polished user experience.
+- **Moralis NFT API Integration**: Fetch NFT relevant data such as price, name, and description using the powerful Moralis NFT API.
+- **Advanced Data Visualization**: Crafted NFT trade and price chart UI using the Recharts library for insightful data visualization and analysis.
 
-### Authentication
-#### Register and Login with Different Role
-![Authentication Process](.github/images/1_login.png)
-#### Logout
-![Authentication Process](.github/images/1_logout.png)
+### Technologies Used
+- **HTML/CSS and JavaScript**: For building the core structure and functionality of the dashboard.
+- **Ant Design**: For efficient and aesthetically pleasing UI components.
+- **Moralis NFT API**: To retrieve comprehensive NFT data.
+- **Recharts**: For creating interactive and informative charts and graphs.
 
-### Upload Hotel
-![Upload Hotel](.github/images/4_uploadStay.png)
-*Interface for hosts to upload new hotels with details and pictures.*
+### Getting Started
+To get started with NFTInsight, follow these steps:
 
-### Manage Hotel
-#### View and Delete Hosting Hotels
-![Manage Hotel](.github/images/5_viewStay_3.png)
-
-![Manage Hotel](.github/images/5_viewStay.png)
-
-#### View Hotel Reservations
-![View Hotel Reservation](.github/images/5_viewStayReservation.png)
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/NFTInsight.git
 
 
-### Search Hotel
-![Search Hotel](.github/images/2_searchStay.png)
-*Interface for clients to search for available hotels.*
+2. Navigate to the project directory:
+   ```sh
+   cd NFTInsight
 
-#### Search Results
-![Search Result](.github/images/2_searchResult.png)
+3. Install the necessary dependencies:
+   ```sh
+   npm install
 
-#### View Details
-![Stay Info](.github/images/2_searchResult_2.png)
+4. Start the development server:
+   ```sh
+   npm start
 
-![Stay Info](.github/images/2_searchResult_1.png)
-
-
-### Manage Reservation
-#### Reserve Hotel
-![Reserve Hotel](.github/images/3_reserveStay.png)
-#### View and Delete Reserved Hotel
-![Manage Reservation](.github/images/3_manageReservation.png)
+### Usage
+Once the development server is running, open your browser and navigate to http://localhost:3000 to view the NFTInsight dashboard. From here, you can search for NFT assets, view detailed information, and analyze price trends through interactive charts.
 
 
-## Technologies Used
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-- **HTML, CSS, JavaScript:** Core technologies for building and styling web frontends, providing structure, design, and interactivity.
-- **React:** Popular JavaScript library for building fast, dynamic, and component-based user interfaces.
-- **Node.js:** JavaScript runtime environment for developing scalable and high-performance network applications.
-- **Ant Design:** Comprehensive design framework for creating beautiful and responsive UI components.
-- **ReChart:** 
-- **AWS Amplify:** Managed static hosting and full-stack deployment service for web applications, offering scalability, custom domains.
-- **
-
-
-## License
-MIT License
